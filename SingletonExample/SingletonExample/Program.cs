@@ -10,6 +10,11 @@ namespace SingletonExample
     {
         static void Main(string[] args)
         {
+            Logger.GetInstance().LogStuff("First line of code in Main");
+            Logger.GetInstance().LogStuff("Loaded from config: " + ConfigLoader.GetInstance().GetConfig());
+            Logger.GetInstance().LogStuff("Got from Database: " + Database.GetInstance().GetStuffFromDB());
+            Logger.GetInstance().LogStuff("Enough examples, bye");
+
         }
     }
 }
